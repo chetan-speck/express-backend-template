@@ -1,6 +1,5 @@
 # 1.0.0 (2025-07-24)
 
-
 ### Features
 
 * add login screen ([283a62b](https://github.com/chetan-speck/express-backend-template/commit/283a62bb781a7a5c8dc6ed9409c50144b62e8f40))
