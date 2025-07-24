@@ -1,38 +1,41 @@
-name: CI/CD
+name: 🚀 Release
 
 on:
     push:
-        branches: [main]
-    pull_request:
-        branches: [main]
+        branches:
+            - main
 
 jobs:
-    build-and-test:
+    release:
+        name: 🔧 Build & Release
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout repository
+            # Step 1: Checkout repo
+            - name: ⬇️ Checkout code
               uses: actions/checkout@v4
 
-            - name: Setup Node.js
+            # Step 2: Setup Node.js
+            - name: 🔧 Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 22
+                  cache: 'npm'
 
-            - name: Install dependencies
+            # Step 3: Install dependencies
+            - name: 📦 Install dependencies
               run: npm ci
 
-            - name: Type-check (optional)
-              run: npx tsc --noEmit
-
-            - name: Build app
-              run: npm run build
-
-            - name: Format check (optional)
+            # Optional: Format check (Prettier)
+            - name: 💅 Run Prettier
               run: npm run format -- --check
 
-            - name: Upload dist folder
-              uses: actions/upload-artifact@v4
-              with:
-                  name: production-build
-                  path: dist/
+            # Step 4: Build the project
+            - name: 🛠️ Build project
+              run: npm run build
+
+            # Step 5: Semantic Release
+            - name: 🚀 Semantic Release
+              run: npx semantic-release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
