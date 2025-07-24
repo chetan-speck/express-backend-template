@@ -38,12 +38,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/chetan-speck/frontend-template.git"
+		"url": "git+https://github.com/chetan-speck/express-backend-template.git"
 	},
 	"bugs": {
-		"url": "https://github.com/chetan-speck/frontend-template/issues"
+		"url": "https://github.com/chetan-speck/express-backend-template/issues"
 	},
-	"homepage": "https://github.com/chetan-speck/frontend-template#readme",
+	"homepage": "https://github.com/chetan-speck/express-backend-template#readme",
 	"engines": {
 		"node": ">=22.0.0"
 	}
