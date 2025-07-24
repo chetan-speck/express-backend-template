@@ -34,7 +34,6 @@ jobs:
             - name: 🛠️ Build project
               run: npm run build
 
-            # Step 5: Semantic Release
             - name: 🚀 Semantic Release
               run: npx semantic-release
               env:
