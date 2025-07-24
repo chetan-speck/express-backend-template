@@ -10,7 +10,9 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"start": "vite preview",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"release": "semantic-release",
+		"release:dry": "semantic-release --dry-run"
 	},
 	"dependencies": {
 		"@material-tailwind/react": "2.1.8",
@@ -18,6 +20,9 @@
 		"react-dom": "18.2.0"
 	},
 	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/github": "^11.0.3",
 		"@types/react": "18.2.45",
 		"@types/react-dom": "18.2.18",
 		"@vitejs/plugin-react": "4.2.1",
@@ -26,6 +31,7 @@
 		"prettier": "^3.6.2",
 		"prettier-plugin-tailwindcss": "^0.6.14",
 		"sass": "^1.89.2",
+		"semantic-release": "^24.2.7",
 		"tailwindcss": "3.4.0",
 		"typescript": "5.3.3",
 		"vite": "5.0.10"
